@@ -1,0 +1,86 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>io.csra.wily</groupId>
+	<artifactId>parent</artifactId>
+	<version>2.0.3</version>
+	<packaging>pom</packaging>
+
+	<name>wily</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		
+		<wily-components-version>2.0.3</wily-components-version>
+		<wily-exceptions-version>2.0.1</wily-exceptions-version>
+		<wily-hipaa-audit-version>2.0.1</wily-hipaa-audit-version>
+		<wily-security-version>2.0.2</wily-security-version>
+		<wily-database-version>2.0.1</wily-database-version>
+	</properties>
+
+	<parent>
+		<groupId>io.csra.wily</groupId>
+		<artifactId>dependencies</artifactId>
+		<version>2.0.3</version>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>io.csra.wily</groupId>
+			<artifactId>hipaa-audit</artifactId>
+			<version>${wily-hipaa-audit-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.csra.wily</groupId>
+			<artifactId>exceptions</artifactId>
+			<version>${wily-exceptions-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.csra.wily</groupId>
+			<artifactId>security</artifactId>
+			<version>${wily-security-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.csra.wily</groupId>
+			<artifactId>components</artifactId>
+			<version>${wily-components-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.csra.wily</groupId>
+			<artifactId>database</artifactId>
+			<version>${wily-database-version}</version>
+		</dependency>
+	</dependencies>
+
+	<!-- Package as an executable jar -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>spring-snapshots</id>
+			<url>http://repo.spring.io/snapshot</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<url>http://repo.spring.io/milestone</url>
+		</repository>
+	</repositories>
+</project>
