@@ -4,7 +4,7 @@
 
 	<groupId>io.csra.wily</groupId>
 	<artifactId>parent</artifactId>
-	<version>2.1.6</version>
+	<version>2.1.8</version>
 	<packaging>pom</packaging>
 
 	<name>wily-parent</name>
@@ -21,9 +21,9 @@
 	<developers>
 		<developer>
 		  <name>Nick DiMola</name>
-		  <email>nick.dimola@csra.com</email>
-		  <organization>CSRA</organization>
-		  <organizationUrl>https://www.csra.com</organizationUrl>
+		  <email>nick.dimola@gdit.com</email>
+		  <organization>GDIT</organization>
+		  <organizationUrl>https://www.gdit.com</organizationUrl>
 		</developer>
 	</developers>
 
@@ -38,17 +38,17 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		
-		<wily-components-version>2.1.5</wily-components-version>
-		<wily-exceptions-version>2.1.5</wily-exceptions-version>
-		<wily-hipaa-audit-version>2.1.5</wily-hipaa-audit-version>
-		<wily-security-version>2.1.5</wily-security-version>
-		<wily-database-version>2.1.5</wily-database-version>
+		<wily-components-version>2.1.8</wily-components-version>
+		<wily-exceptions-version>2.1.8</wily-exceptions-version>
+		<wily-hipaa-audit-version>2.1.8</wily-hipaa-audit-version>
+		<wily-security-version>2.1.8</wily-security-version>
+		<wily-database-version>2.1.8</wily-database-version>
 	</properties>
 
 	<parent>
 		<groupId>io.csra.wily</groupId>
 		<artifactId>dependencies</artifactId>
-		<version>2.1.5</version>
+		<version>2.1.8</version>
 	</parent>
 
 	<dependencies>
