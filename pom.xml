@@ -38,11 +38,11 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		
-		<wily-components-version>2.1.8</wily-components-version>
-		<wily-exceptions-version>2.1.8</wily-exceptions-version>
-		<wily-hipaa-audit-version>2.1.8</wily-hipaa-audit-version>
+		<wily-components-version>2.2.0</wily-components-version>
+		<wily-exceptions-version>2.2.0</wily-exceptions-version>
+		<wily-hipaa-audit-version>2.2.0</wily-hipaa-audit-version>
 		<wily-security-version>2.2.0</wily-security-version>
-		<wily-database-version>2.1.8</wily-database-version>
+		<wily-database-version>2.2.0</wily-database-version>
 	</properties>
 
 	<parent>
