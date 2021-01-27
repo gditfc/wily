@@ -4,7 +4,7 @@
 
 	<groupId>io.csra.wily</groupId>
 	<artifactId>parent</artifactId>
-	<version>2.2.0</version>
+	<version>2.4.2</version>
 	<packaging>pom</packaging>
 
 	<name>wily-parent</name>
@@ -38,17 +38,17 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		
-		<wily-components-version>2.2.0</wily-components-version>
-		<wily-exceptions-version>2.2.0</wily-exceptions-version>
-		<wily-hipaa-audit-version>2.2.0</wily-hipaa-audit-version>
-		<wily-security-version>2.2.0</wily-security-version>
-		<wily-database-version>2.2.0</wily-database-version>
+		<wily-components-version>2.4.2</wily-components-version>
+		<wily-exceptions-version>2.4.2</wily-exceptions-version>
+		<wily-hipaa-audit-version>2.4.2</wily-hipaa-audit-version>
+		<wily-security-version>2.4.2</wily-security-version>
+		<wily-database-version>2.4.2</wily-database-version>
 	</properties>
 
 	<parent>
 		<groupId>io.csra.wily</groupId>
 		<artifactId>dependencies</artifactId>
-		<version>2.2.0</version>
+		<version>2.4.2</version>
 	</parent>
 
 	<dependencies>
@@ -154,18 +154,18 @@
 		</dependency>
 
 		<dependency>
-			<groupId>net.sf.ehcache</groupId>
-			<artifactId>ehcache</artifactId>
-		</dependency>
-
-		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjweaver</artifactId>
 		</dependency>
 
 		<dependency>
-			<groupId>net.sf.dozer</groupId>
-			<artifactId>dozer</artifactId>
+			<groupId>com.github.dozermapper</groupId>
+			<artifactId>dozer-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
 		</dependency>
 
 		<dependency>
@@ -247,12 +247,7 @@
 
 		<dependency>
 			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger-ui</artifactId>
+			<artifactId>springfox-boot-starter</artifactId>
 		</dependency>
 
 		<dependency>
