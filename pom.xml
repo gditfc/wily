@@ -33,11 +33,11 @@
     </scm>
 
     <properties>
-        <wily-components-version>${project.parent.version}</wily-components-version>
-        <wily-exceptions-version>${project.parent.version}</wily-exceptions-version>
-        <wily-hipaa-audit-version>${project.parent.version}</wily-hipaa-audit-version>
-        <wily-security-version>${project.parent.version}</wily-security-version>
-        <wily-database-version>${project.parent.version}</wily-database-version>
+        <wily-components-version>2.6.2</wily-components-version>
+        <wily-exceptions-version>2.6.2</wily-exceptions-version>
+        <wily-hipaa-audit-version>2.6.2</wily-hipaa-audit-version>
+        <wily-security-version>2.6.2</wily-security-version>
+        <wily-database-version>2.6.2</wily-database-version>
     </properties>
 
     <parent>
