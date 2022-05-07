@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>parent</artifactId>
-    <version>2.6.2</version>
+    <version>2.6.7</version>
     <packaging>pom</packaging>
 
     <name>wily-parent</name>
@@ -33,17 +33,17 @@
     </scm>
 
     <properties>
-        <wily-components-version>2.6.2</wily-components-version>
-        <wily-exceptions-version>2.6.2</wily-exceptions-version>
-        <wily-hipaa-audit-version>2.6.2</wily-hipaa-audit-version>
-        <wily-security-version>2.6.2</wily-security-version>
-        <wily-database-version>2.6.2</wily-database-version>
+        <wily-components-version>2.6.7</wily-components-version>
+        <wily-exceptions-version>2.6.7</wily-exceptions-version>
+        <wily-hipaa-audit-version>2.6.7</wily-hipaa-audit-version>
+        <wily-security-version>2.6.7</wily-security-version>
+        <wily-database-version>2.6.7</wily-database-version>
     </properties>
 
     <parent>
         <groupId>io.csra.wily</groupId>
         <artifactId>dependencies</artifactId>
-        <version>2.6.2</version>
+        <version>2.6.7</version>
     </parent>
 
     <dependencies>
@@ -335,6 +335,47 @@
         </resources>
 
         <plugins>
+            <plugin>
+                <groupId>pl.project13.maven</groupId>
+                <artifactId>git-commit-id-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>revision</goal>
+                        </goals>
+                        <phase>validate</phase>
+                    </execution>
+                </executions>
+                <configuration>
+                    <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>prep-dockerfile</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.basedir}/target/</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.basedir}</directory>
+                                    <includes>
+                                        <include>Dockerfile.*</include>
+                                    </includes>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
